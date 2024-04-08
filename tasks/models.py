@@ -33,3 +33,9 @@ class Task(models.Model):
         null=True,
         blank=True
     )
+
+    status = models.CharField(
+        max_length=50,
+        choices=STATUS_CHOICES,
+        default='New',
+    )
