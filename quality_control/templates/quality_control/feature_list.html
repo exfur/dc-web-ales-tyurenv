@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %} {% block content %}
 <h2>Feature Requests</h2>
+<a href="{% url 'feature_request_form' %}">Создать запрос на улучшение</a>
 <ul>
   {% for feature_request in feature_requests %}
   <li>{{ feature_request.title }} - {{ feature_request.status }}</li>
