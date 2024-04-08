@@ -6,3 +6,14 @@
 <p><strong>Priority:</strong> {{ feature.priority }}</p>
 <p><strong>Project:</strong> {{ feature.project }}</p>
 <p><strong>Task:</strong> {{ feature.task }}</p>
+
+<!-- Add links for update and delete options -->
+<p>
+  <a href="{% url 'quality_control:update_feature' feature.id %}"
+    >Редактировать</a
+  >
+  <a href="{% url 'quality_control:delete_feature_confirm' feature.id %}"
+    >Удалить</a
+  >
+</p>
+{% endblock %}
