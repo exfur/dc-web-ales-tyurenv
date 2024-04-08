@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %} {% block content %}
+<h2>Bug Reports</h2>
+<ul>
+  {% for bug_report in bug_reports %}
+  <li>{{ bug_report.title }} - {{ bug_report.status }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
